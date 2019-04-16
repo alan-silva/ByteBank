@@ -18,10 +18,6 @@ namespace ByteBank
 
         }
 
-        public void Registrar( Diretor diretor) // Sobrecarga com o mesmo nome mudando apenas o tipo de argumento
-        {
-            _totalBonificacao += diretor.GetBonificacao();
-        }
 
         public double GetTotalBonificacao()
         {

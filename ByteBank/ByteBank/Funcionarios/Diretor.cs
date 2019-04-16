@@ -9,14 +9,25 @@ namespace ByteBank.Funcionarios
     public class Diretor : Funcionario
     {
 
-        public string Nome { get; set; }
-        public string CPF { get; set; }
-        public double Salario { get; set; }
-
-
-        public double GetBonificacao()
+        public Diretor(double salario,string cpf):base(salario,cpf)
         {
-            return Salario ;
+           
+
+
+        }
+
+        public override void AumentarSalario()
+        {
+
+            
+           Salario *= 1.15;
+        }
+
+        public override double GetBonificacao()
+        {
+
+            
+            return Salario + base.GetBonificacao();
         }
     }
 }
